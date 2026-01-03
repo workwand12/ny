@@ -96,3 +96,4 @@ nattura-yurtel/
 - `next.config.js` - Next.js settings
 - `.env.example` - Environment variables template
 
+

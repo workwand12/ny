@@ -295,3 +295,4 @@ npm run lint             # Run linter
 # Check Network tab for API calls
 ```
 
+

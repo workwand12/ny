@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 export async function GET() {
   try {
     const images = await prisma.galleryImage.findMany({
@@ -30,4 +33,5 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Failed to add image' }, { status: 500 })
   }
 }
+
 

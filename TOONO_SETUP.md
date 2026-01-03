@@ -96,3 +96,4 @@ const CALIBRATION = {
 - Make sure the SVG overlay is positioned correctly
 - Verify the paths are being generated correctly
 
+
