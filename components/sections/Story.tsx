@@ -6,9 +6,10 @@ import Image from 'next/image'
 interface StoryProps {
   title: string
   text: string
+  image?: string
 }
 
-export function Story({ title, text }: StoryProps) {
+export function Story({ title, text, image = '/images/story.jpg' }: StoryProps) {
   return (
     <section className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -42,7 +43,7 @@ export function Story({ title, text }: StoryProps) {
           >
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/story.jpg"
+                src={image}
                 alt="Traditional yurt interior"
                 fill
                 className="object-cover"

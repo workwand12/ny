@@ -14,6 +14,8 @@ model Content {
   id        String   @id @default(cuid())
   key       String   @unique
   value     String
+  type      String   @default("text") // text, image, url, html
+  section   String?  // hero, story, amenities, etc.
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

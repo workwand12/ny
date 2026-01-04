@@ -3,18 +3,20 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+
 interface HeroProps {
   title: string
   subtitle: string
+  image?: string
 }
 
-export function Hero({ title, subtitle }: HeroProps) {
+export function Hero({ title, subtitle, image = '/images/hero.jpg' }: HeroProps) {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src={image}
           alt="Yurt in Icelandic landscape"
           fill
           className="object-cover"
